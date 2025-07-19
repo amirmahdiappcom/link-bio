@@ -1,0 +1,119 @@
+.profile-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 20px;
+  max-width: 300px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid transparent;
+  margin-bottom: 10px;
+  background-image: linear-gradient(white, white), 
+                    conic-gradient(from 0deg, #00f, #0ff, #0f0, #ff0, #f00, #00f);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  animation: rotateBorder 4s linear infinite;
+}
+
+@keyframes rotateBorder {
+  0% {
+    background-image: linear-gradient(white, white), 
+                      conic-gradient(from 0deg, #00f, #0ff, #0f0, #ff0, #f00, #00f);
+  }
+  100% {
+    background-image: linear-gradient(white, white), 
+                      conic-gradient(from 360deg, #00f, #0ff, #0f0, #ff0, #f00, #00f);
+  }
+}
+
+a i {
+  margin-left: 8px;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+/* استایل دکمه‌ها */
+button {
+  width: 100%;
+  padding: 12px 0;
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* افکت hover روی دکمه‌ها */
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* استایل لینک‌ها (شبیه دکمه) */
+a {
+  display: block;
+  margin: 10px auto;
+  padding: 12px 24px;
+  width: 200px;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(0, 123, 255, 0.8);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* افکت hover روی لینک‌ها */
+a:hover {
+  background-color: rgba(0, 86, 179, 0.9);
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ریسپانسیو برای صفحه نمایش‌های کوچک */
+@media (max-width: 480px) {
+  .profile-card {
+    max-width: 90%;
+    padding: 15px;
+  }
+  a {
+    width: 90%;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  a i {
+    font-size: 16px;
+  }
+  button {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+}
+.credit {
+  position: fixed;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 14px; /* از 12 به 14 افزایش یافت */
+  color: rgba(255, 255, 255, 0.6); /* کمی پررنگ‌تر هم شد */
+  z-index: 10;
+}
+
+
+
+
+
