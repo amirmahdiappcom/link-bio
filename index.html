@@ -1,99 +1,50 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>امیر مهدی حیدری | لینک‌ها</title>
-  <link rel="stylesheet" href="style.css">
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-/>
-
-  <style>
-    /* بک‌گراند ویدیو */
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      text-align: center;
-      padding: 20px;
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
-      z-index: 1;
-    }
-
-    video.bg-video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-
-    h1 {
-      color: #0a0404;
-      margin-top: 50px;
-    }
-
-    p {
-      color: #000000;
-    }
-
-    a {
-      display: block;
-      margin: 10px auto;
-      padding: 12px 24px;
-      width: 200px;
-      text-decoration: none;
-      color: rgb(0, 0, 0);
-      background-color: rgba(0, 123, 255, 0.8);
-      border-radius: 10px;
-      transition: 0.3s;
-    }
-
-    a:hover {
-      background-color: rgba(0, 86, 179, 0.9);
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amirmahdi | Links</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
   <!-- ویدیو پس‌زمینه -->
   <video autoplay muted loop class="bg-video">
-   <source src="new-background.mp4" type="video/mp4">
-    مرورگر شما از نمایش ویدیو پشتیبانی نمی‌کند.
+    <source src="background.mp4" type="video/mp4">
+    مرورگر شما از ویدیو پشتیبانی نمی‌کند.
   </video>
 
-  <!-- محتوای صفحه -->
- <div class="profile-card">
-  <img src="your-profile.jpg" alt="پروفایل امیر مهدی" class="profile-pic">
-  <h2>Amirmahdi Hydari</h2>
-  <p>دانشجوی مهندسی کامپیوتر</p>
-</div>
+  <!-- پروفایل شیک -->
+  <div class="profile-container">
+    <img src="profile.jpg" alt="Profile" class="profile-pic" />
+    <h1 class="name-glow">Amir Mahdi Heydari</h1>
+     <p class="title">Computer Engineering Student</p>
+  </div>
 
+  <!-- دکمه‌های شیشه‌ای لینک‌ها -->
+  <div class="links-card">
+    <a href="https://t.me/mahdi_heydari2005" target="_blank">
+      <i class="fab fa-telegram"></i> Telegram
+    </a>
+    <a href="https://t.me/alliiyyty" target="_blank">
+      <i class="fab fa-telegram"></i> Channel
+    </a>
+    <a href="mailto:amir.mahdi.heydari.05@gmail.com">
+      <i class="fas fa-envelope"></i> Email
+    </a>
+    <a href="https://www.tiktok.com/@mahdi.__heydari88" target="_blank">
+      <i class="fab fa-tiktok"></i> TikTok
+    </a>
+    <a href="https://eitaa.com/amirmahdiheydaiii" target="_blank">
+      <i class="fas fa-comments"></i> Eitaa
+    </a>
+  </div>
 
-<a href="https://t.me/mahdi_heydari2005" target="_blank">
-  <i class="fab fa-telegram-plane"></i> تلگرام
-</a>
-<a href="https://t.me/alliiyyty" target="_blank">
-  <i class="fab fa-telegram-plane"></i> کانال شخصی تلگرام من
-</a>
-<a href="mailto:amir.mahdi.heydari.05@gmail.com">
-  <i class="fas fa-envelope"></i> ایمیل
-</a>
-<a href="https://www.tiktok.com/@mahdi.__heydari88" target="_blank">
-  <i class="fab fa-tiktok"></i> تیک تاک
-</a>
-<a href="https://eitaa.com/amirmahdiheydaiii" target="_blank">
-  <i class="fas fa-comments"></i> ایتا
-</a>
-<footer class="credit">
-  Made by Amir Mahdi Heydari
-</footer>
-
+  <!-- پاورقی -->
+  <footer>
+    <small>Made by Amir Mahdi Heydari</small>
+  </footer>
 
 </body>
 </html>
