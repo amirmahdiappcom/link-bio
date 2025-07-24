@@ -1,17 +1,17 @@
-/* ریست پایه */
+/* تنظیمات عمومی */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-  min-height: 100vh;
-  background-color: #000;
-  color: #dcdcdc;
-  overflow-x: hidden;
   position: relative;
+  min-height: 100vh;
+  background: #000;
+  overflow-x: hidden;
+  color: #fff;
 }
 
 /* ویدیو پس‌زمینه */
@@ -19,247 +19,124 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
-  width: 100vw;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   z-index: -1;
+  filter: brightness(0.6);
 }
 
-/* ---------- بخش پروفایل ---------- */
+/* بخش پروفایل */
 .profile-container {
-  max-width: 250px;
-  margin: 40px auto 30px;
-  padding: 50px 5px;
-  background: linear-gradient(135deg, #ffffff14, #0000007f);
-  border-radius: 55px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.732);
   text-align: center;
-  backdrop-filter: blur(1px);
+  padding: 30px 20px 10px;
+  margin-top: 30px;
+  backdrop-filter: blur(0px);
+  background: rgba(0, 0, 0, 0.0);
 }
 
 .profile-pic {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  width: 130px;
+  height: 130px;
   object-fit: cover;
-  border: 4px solid #000000b9;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  margin-bottom: 30px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
 }
 
-.name {
-  font-size: 24px;
-  font-weight: bold;
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+/* اسم با افکت خاص */
+.name-glow {
+  font-size: 1.8rem;
+  margin-top: 15px;
   color: #fff;
-  margin-bottom: 8px;
+  animation: glow 2.5s ease-in-out infinite alternate;
+  letter-spacing: 1px;
 }
 
-.bio {
-  font-size: 16px;
-  opacity: 1;
-  color: #ccc;
-  margin-bottom: 10px;
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fffdfd, 0 0 10px #6cf, 0 0 15px #6cf;
+  }
+  to {
+    text-shadow: 0 0 15px #0ff, 0 0 25px #0ff, 0 0 35px #0ff;
+  }
 }
 
-/* ---------- لینک‌ها در قاب شیشه‌ای ---------- */
-.links-card {
-  max-width: 360px;
-  margin: 0 auto;
-  padding: 20px;
-  background: rgba(11, 4, 4, 0.812);
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.807);
-}
-
-.links-card a {
+/* عنوان پایین اسم */
+.title {
+  font-size: 1rem;
+  margin-top: 8px;
+  color: #000000;
+  height: 1.5em; /* مقدار را می‌توانی بیشتر هم بزنی مثل 2em */
   display: block;
-  width: 100%;
-  padding: 12px 16px;
-  margin: 14px 0;
-  background: rgba(128, 125, 125, 0.896);
-  border-radius: 12px;
-  color: rgb(11, 1, 1);
+  overflow: hidden;
+  /* line-height: 1.5;  اگر خواستی می‌تونی فعال کنی */
+}
+
+/* لینک‌ها داخل قاب شیشه‌ای */
+.links-card {
+  margin: 25px auto;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(243, 243, 243, 0.266);
+  backdrop-filter: blur(0.5px);
+  box-shadow: 0 0 25px rgb(41, 57, 227);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: floatIn 1.5s ease;
+}
+
+@keyframes floatIn {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* دکمه‌های لینک */
+.links-card a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(165, 154, 255, 0.867);
+  padding: 12px 20px;
+  border-radius: 15px;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 500;
-  font-size: 15px;
-  text-align: center;
+  backdrop-filter: blur(10px);
   transition: all 0.3s ease;
-}
-
-.links-card a i {
-  margin-right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.868);
 }
 
 .links-card a:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
+  transform: scale(1.03);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
-.links-card a:active {
-  transform: scale(0.95);
-  background: rgba(233, 11, 11, 0.4);
+/* آیکون‌ها */
+.links-card i {
+  font-size: 1.2rem;
 }
 
-/* ---------- فوتر ---------- */
+/* پاورقی */
 footer {
-  margin-top: 25px;
   text-align: center;
-}
-
-footer small {
-  font-size: 12px;
+  padding: 20px 10px;
+  font-size: 0.85rem;
   color: #aaa;
+  margin-top: 40px;
 }
-
-/* ---------- واکنش‌گرا ---------- */
-@media (max-width: 400px) {
-  .profile-container {
-    margin: 30px 10px 15px;
-    padding: 20px 15px;
-  }
-
-  .profile-pic {
-    width: 100px;
-    height: 100px;
-  }
-
-  .name {
-    font-size: 20px;
-  }
-
-  .bio {
-    font-size: 12px;
-  }
-
-  .links-card {
-    padding: 15px;
-    margin: 0 10px;
-  }
-
-  .links-card a {
-    font-size: 14px;
-    padding: 10px;
-  }
-}
-@keyframes fadeInScale {
-  0% {
-    opacity: 0;
-    transform: scale(0.6);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes slideUpFade {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInDelay {
-  0% {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.profile-pic {
-  animation: fadeInScale 3s ease-out forwards;
-}
-.name {
-  animation: slideUpFade 3s ease-out 0.3s forwards;
-  opacity: 0;
-}
-
-.bio {
-  animation: slideUpFade 5s ease-out 0.8s forwards;
-  opacity: 0;
-}
-.links-card a {
-  opacity: 0;
-  transform: translateY(10px);
-  animation: fadeInDelay 0.6s ease-out forwards;
-}
-
-/* ترتیب تاخیری برای هر لینک */
-.links-card a:nth-child(1) { animation-delay: 0.6s; }
-.links-card a:nth-child(2) { animation-delay: 0.75s; }
-.links-card a:nth-child(3) { animation-delay: 0.9s; }
-/* ادامه بده به دلخواه */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blinkCaret {
-  50% { border-color: transparent; }
-}
-
-@keyframes glowPulse {
-  0%, 100% {
-    text-shadow: 0 0 10px hsl(260, 99%, 28%), 0 0 20px #000000, 0 0 30px #2b0179;
-  }
-  50% {
-    text-shadow: 0 0 20px #400088df, 0 0 40px #820000, 0 0 60px #d6d200;
-  }
-}
-
-.name-glow {
-  color: #000000;
-  font-size: 20px;
-  font-weight: bold;
-  font-family: monospace;
-  width: fit-content;
-  max-width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid #000000;
-  
-  animation:
-    typing 3s steps(20, end) forwards,
-    blinkCaret 0.7s step-end infinite,
-    glowPulse 2.5s ease-in-out infinite;
-}
-/* نام با افکت تایپ و درخشش */
-.glow-type {
-  font-size: 26px;
-  font-weight: bold;
-  color: #00ffff;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 3px solid #00ffff;
-  width: 0;
-  animation:
-    typing 3s steps(30, end) forwards,
-    blinkCaret 0.7s step-end infinite,
-    glowPulse 2.5s ease-in-out infinite;
-  margin: 0 auto;
-  max-width: 90vw;
-}
-
-/* عنوان زیر اسم با فاصله */
-.title {
-  font-size: 16px;
-  color: #ccc;
-  margin-top: 20px;
-  opacity: 0.85;
-  animation: fadeIn 3.2s ease forwards;
-}
-
-/* افکت محو ظاهر شدن */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 0.85; transform: translateY(0); }
-}
-
