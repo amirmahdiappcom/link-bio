@@ -1,44 +1,118 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fa">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amir Mahdi | Links</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amir Mahdi Heydari — Personal</title>
+
+  <!-- فونت -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- استایل اصلی -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.1/ScrollTrigger.min.js"></script>
 </head>
 <body>
 
-  <!-- قاب پروفایل -->
-  <div class="profile-container">
-    <img src="profile.jpg" alt="Profile" class="profile-pic" />
-    <h1 class="name-glow">Amir Mahdi Heydari</h1>
-    <p class="title">Computer Engineering Student</p>
+  <!-- المان جدید بالای صفحه (topbar) -->
+  <div class="topbar" aria-hidden="false">
+    <div class="topbar-inner">
+      <div class="logo">AM</div>
+      <div class="top-text">Freelance · Web & Frontend Enthusiast</div>
+    </div>
   </div>
 
-  <!-- لینک‌ها با قاب شیشه‌ای -->
-  <div class="links-card">
-    <a href="https://t.me/mahdi_heydari2005" target="_blank">
-      <span>Telegram</span> <i class="fab fa-telegram"></i>
-    </a>
-    <a href="https://t.me/alliiyyty" target="_blank">
-      <span>Channel</span> <i class="fab fa-telegram"></i>
-    </a>
-    <a href="mailto:amir.mahdi.heydari.05@gmail.com" target="_blank">
-      <span>Email</span> <i class="fas fa-envelope"></i>
-    </a>
-    <a href="https://www.tiktok.com/@mahdi.__heydari88" target="_blank">
-      <span>TikTok</span> <i class="fab fa-tiktok"></i>
-    </a>
-    <a href="https://eitaa.com/ggggggggglll88" target="_blank">
-      <span>Eitaa</span> <i class="fas fa-comments"></i>
-    </a>
-  </div>
+  <!-- عنصر بک‌گراند: خودت bg.jpg را در مسیر قرار بده -->
+  <div class="bg" aria-hidden="true"></div>
 
-  <!-- پاورقی -->
-  <footer>
-    <small>Made by Amir Mahdi Heydari</small>
-  </footer>
+  <!-- بوت‌استرپ ساده‌ی صفحات: دو سکشن در یک صفحه -->
+  <main>
 
+    <!-- HERO (صفحه اول) -->
+    <section class="section hero" id="hero" role="region" aria-label="Hero">
+      <div class="container hero-inner">
+        <!-- عکس سمت چپ -->
+        <div class="hero-left">
+          <div class="profile-wrap">
+            <!-- profile.jpg را با تصویرت جایگزین کن -->
+            <img src="Amirmahdi.jpg" alt="Amir Mahdi Heydari" class="profile">
+            <!-- (در صورت خواست می‌تونیم circular text یا افکت‌های اضافه هم اضافه کنیم) -->
+          </div>
+        </div>
+
+        <!-- متن سمت راست -->
+        <div class="hero-right">
+          <div class="card-text">
+            <h1 class="name">Hello, I’m <span>Amir Mahdi Heydari</span></h1>
+            <p class="role">Computer Engineering Student · Web Enthusiast</p>
+            <p class="tagline">Passionate about building modern and user-friendly websites.</p>
+
+            <div class="cta-row">
+              <a href="#about" class="btn btn-primary" id="toAbout">Learn More</a>
+              <a href="mailto:you@example.com" class="btn btn-ghost">Email</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT (صفحه دوم) -->
+    <section class="section about" id="about" role="region" aria-label="About">
+      <div class="container about-inner">
+        <h2 class="about-title">About Me</h2>
+
+        <p class="lead">
+          Hello, my name is <strong>Amir Mahdi Heydari</strong>, I’m <strong>20 years old</strong>,
+          a Computer Engineering student and web enthusiast. I’m passionate about web design and programming,
+          always exploring new technologies to improve my skills.
+        </p>
+
+        <div class="sections">
+          <article class="about-block">
+            <h3>Early Life</h3>
+            <p>I grew up curious about how websites work and made my first simple pages in high school...</p>
+          </article>
+
+          <article class="about-block">
+            <h3>Projects & Experience</h3>
+            <p>I have built multiple personal projects using HTML, CSS and JavaScript, learning responsive design and UX principles.</p>
+          </article>
+
+          <article class="about-block">
+            <h3>Philosophy</h3>
+            <p>I believe web experiences should be both beautiful and useful. Every project is an opportunity to solve a problem.</p>
+          </article>
+        </div>
+
+        <!-- آیکون‌های شبکه‌های اجتماعی: این‌ها تصویر هستند؛ آیکون‌ها را خودت اضافه کن -->
+        <div class="social-row" aria-label="social links">
+          <a href="https://t.me/yourusername" target="_blank" rel="noopener" class="social" aria-label="Telegram">
+            <img src="icon-telegram.svg" alt="">
+          </a>
+          <a href="https://instagram.com/yourusername" target="_blank" rel="noopener" class="social" aria-label="Instagram">
+            <img src="icon-instagram.svg" alt="">
+          </a>
+          <a href="mailto:you@example.com" class="social" aria-label="Email">
+            <img src="icon-email.svg" alt="">
+          </a>
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="social" aria-label="GitHub">
+            <img src="icon-github.svg" alt="">
+          </a>
+        </div>
+
+        <footer class="about-footer">
+          <div>Let’s connect — I’m open to collaboration and new ideas.</div>
+          <div>Made with ♥️</div>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- اسکریپت انیمیشن‌ها -->
+  <script src="script.js"></script>
 </body>
 </html>
